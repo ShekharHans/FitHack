@@ -37,7 +37,7 @@ const Navbar = () => (
         borderRadius: "30px",
       }}
     >
-      <div
+      {/* <div
         style={{
           display: "flex",
           gap: "40px",
@@ -46,7 +46,7 @@ const Navbar = () => (
           alignItems: "center",
           justifyContent: "center",
         }}
-      >
+      > */}
         {/* <Link
           to="/"
           style={{
@@ -85,7 +85,7 @@ const Navbar = () => (
         >
           Contact Us
         </Link> */}
-      </div>
+      {/* </div> */}
     </motion.nav>
   </motion.div>
 );
