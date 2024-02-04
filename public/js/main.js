@@ -26,12 +26,7 @@ function handlePoseResults(results) {
       compareWithNobleKeypoints();
       drawHead();
 
-    // const keysToCheck1 = ["leftElbow", "rightElbow"]; // Add specific keys here
-    // const keysToCheck2 = ["leftShoulder", "rightShoulder"]; // Add specific keys here
-    // const keysToCheck3 = ["leftHip", "rightHip"]; // Add specific keys here
-    // compareWithNobleKeypoints(keysToCheck1);
-    // compareWithNobleKeypoints(keysToCheck2);
-    // compareWithNobleKeypoints(keysToCheck3);
+   
   }
 }
 
