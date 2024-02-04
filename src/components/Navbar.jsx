@@ -47,7 +47,7 @@ const Navbar = () => (
           justifyContent: "center",
         }}
       >
-        <Link
+        {/* <Link
           to="/"
           style={{
             textDecoration: "none",
@@ -56,8 +56,8 @@ const Navbar = () => (
           }}
         >
           Home
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           to="/exercises"
           style={{
             textDecoration: "none",
@@ -84,7 +84,7 @@ const Navbar = () => (
           }}
         >
           Contact Us
-        </Link>
+        </Link> */}
       </div>
     </motion.nav>
   </motion.div>
