@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
+
+
+body {
+  font-family: 'Josefin Sans';
+  background-color: #fff;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -20px;
+  right: 80px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.right-arrow {
+  right: 140px;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.react-horizontal-scrolling-menu--wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+
+}
+
+.exercise-card {
+  width: 400px;
+  height: 445px;
+  background: #fff;
+  border-top: 4px solid #FF2625;
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 326px;
+}
+
+
+.search-btn:hover {
+  color: #FF2625 !important;
+  border: 1px solid #FF2625 !important;
+}
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    position: static !important;
+  }
+
+  .hero-banner-img {
+    display: none;
+  }
+
+  .exercise-card {
+    width: 320px;
+  }
+
+  .exercise-video {
+    width: 320px;
+    height: 300px;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .exercise-card {
+    width: 280px;
+  }
+}
+
+
+.btn {
+  display: inline-block !important;
+  text-decoration: none !important;
+  background: #1d1d1e !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  padding: 13px 35px 12px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  width: 15rem;
+}
+
+.btn {
+  color: #fff;
+}
+
+.btn:hover {
+  color: #000116;
+}
+
+.btn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 1, 0% 100%, 101% 100%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  background: #FF2625;
+  pointer-events: none;
+  transition: .5s;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+.btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  clip-path: polygon(0 1, 101% 0%, 100% 100%);
+  transform: scale(0);
+  transform-origin: top right;
+  background: #FF2625;
+  pointer-events: none;
+  transition: .5s;
+  opacity: .5;
+  z-index: -1;
+  height: 100%;
+
+}
+.react-horizontal-scrolling-menu--scroll-container{
+  display: flex !important;
+}
+/* Footer.css */
+
+.footer {
+  background-color: #141414;
+  color: #757575;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Center the content horizontally */
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h4 {
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}

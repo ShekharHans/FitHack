@@ -1,0 +1,213 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+}
+
+#left-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#right-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.button {
+  top: 10px;
+  left: 10px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#dashboard-container {
+  padding: 20px;
+  /* background-color: #fff; */
+  border-radius: 5px;
+}
+
+.workout-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  /* background-color: #f0f0f0; */
+  border-radius: 5px;
+}
+/* Existing CSS styles */
+
+#video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#countdown {
+  position: absolute;
+  font-size: 48px;
+  z-index: 9999; /* Ensure the countdown is above the video */
+  color: #0e0d0d;
+  z-index: 9999;
+}
+#dashboard-container {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.workout-item {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.exercise-detail-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-item h3 {
+  color: #ff2625;
+  text-transform: uppercase;
+  margin: 0px;
+  font-family: Antonio, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 94%;
+  letter-spacing: 2px;
+  opacity: 1;
+  transform: none;
+}
+
+.workout-item p {
+  font-size: 1.5rem;
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  color: #000;
+  opacity: 1;
+  transform: none;
+}
+
+.detail-image {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.dashboard-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block !important;
+  text-decoration: none !important;
+  background: #1d1d1e !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  padding: 13px 35px 12px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  width: 15rem;
+}
+
+.btn {
+  color: #fff;
+}
+
+.btn:hover {
+  color: #000116;
+}
+
+.btn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(0 1, 0% 100%, 101% 100%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  background: #ff2625;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  clip-path: polygon(0 1, 101% 0%, 100% 100%);
+  transform: scale(0);
+  transform-origin: top right;
+  background: #ff2625;
+  pointer-events: none;
+  transition: 0.5s;
+  opacity: 0.5;
+  z-index: -1;
+  height: 100%;
+}

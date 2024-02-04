@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="/detection.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="left-section">
+        <div>
+          <div id="video-container"></div>
+        </div>
+        <div id="grid-container">
+          <div id="waistCurlsCounter" class="grid-item">10</div>
+          <div id="handCurlsCounter" class="grid-item">5</div>
+          <div id="legCurlsCounter" class="grid-item">1</div>
+        </div>
+        <div class="dashboard-btn">
+          <button class="back">
+            <a href="/">
+              <img
+                src="./js/asset/icons/left-arrow.png"
+                alt=""
+                class="back-image"
+              />
+            </a>
+          </button>
+          <button id="refreshButton" class="btn">Refresh</button>
+        </div>
+      </div>
+      <div id="right-section">
+        <div id="dashboard-container"></div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/sketch.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/feedback.js"></script>
+    <script src="./js/audio.js"></script>
+
+    <script>
+      let refreshButton = document.getElementById("refreshButton");
+      refreshButton.addEventListener("click", refreshCanvas);
+      recognition.start();
+    </script>
+
+    <script>
+      // Retrieve data from local storage
+      const storedData = localStorage.getItem("selectedExercise"); // Replace 'yourDataKey' with the key you used to store the data
+
+      if (storedData) {
+        // Parse JSON data
+        const exerciseData = JSON.parse(storedData);
+
+        // Create elements to represent the data
+        const workoutContainer = document.getElementById("dashboard-container");
+
+        const workoutItem = document.createElement("div");
+        workoutItem.classList.add("workout-item");
+        workoutItem.innerHTML = `
+        <h3>${exerciseData.name}</h3>
+        <div class="exercise-detail-box" >
+      <img src="${
+        exerciseData.gifUrl
+      }" alt={name} loading="lazy" className="detail-image" style={{ maxWidth: '100%' }} >
+      <p style={{ fontSize: '18px', color: '#4F4C4C' }}>
+          Exercises keep you strong. <span style={{ textTransform: 'capitalize' }}>${
+            exerciseData.name
+          }</span> bup is one of the best
+          exercises to target your ${
+            exerciseData.target
+          }. It will help you improve your mood and gain energy.
+        </p>
+        <div class="grid-container">
+            <p class = "grid-item"><strong>Body Part:</strong> ${
+              exerciseData.bodyPart
+            }</p>
+            <p class ="grid-item"><strong>Equipment:</strong> ${
+              exerciseData.equipment
+            }</p>
+            <p class = "grid-item"><strong>Target:</strong> ${
+              exerciseData.target
+            }</p>
+            <p class="grid-item"><strong>Secondary Muscles:</strong> ${exerciseData.secondaryMuscles.join(
+              ", "
+            )}</p>
+        </div>
+        
+    `;
+
+        workoutContainer.appendChild(workoutItem);
+      }
+
+      // Update the DOM to display counter values
+function updateCounters() {
+    document.getElementById("waistCurlsCounter").innerText = waistCurlsCounter.toString();
+    document.getElementById("handCurlsCounter").innerText = handCurlsCounter.toString();
+    document.getElementById("legCurlsCounter").innerText = legCurlsCounter.toString();
+}
+    </script>
+  </body>
+</html>
