@@ -16,6 +16,7 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
 }
 
+
 const clerkPubKey = "pk_test_YmVjb21pbmctc3RpbmtidWctNzkuY2xlcmsuYWNjb3VudHMuZGV2JA";
 
 const ClerkWithRoutes = () => {
