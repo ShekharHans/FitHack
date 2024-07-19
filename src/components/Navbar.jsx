@@ -2,18 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Logo from "../assets/images/etherealeclat.png";
-
+import { UserButton, SignedIn, SignedOut} from '@clerk/clerk-react';
 import Exercises from "./Exercises";
+
 
 const Navbar = () => (
   <motion.div
     style={{
       display: "flex",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       width: "100vw",
       position: "fixed",
       top: "10px",
       zIndex: "99999",
+      padding: "20px",
     }}
   >
     <Link to="/">
@@ -37,6 +39,7 @@ const Navbar = () => (
         borderRadius: "30px",
       }}
     >
+      
       {/* <div
         style={{
           display: "flex",
@@ -86,7 +89,17 @@ const Navbar = () => (
           Contact Us
         </Link> */}
       {/* </div> */}
+      <SignedOut>
+      <a href="/sign-up"
+      style={{
+        color: "#fff",
+      }}>SignUp/Login</a>
+    </SignedOut>
+    <SignedIn>
+      <UserButton />
+    </SignedIn>
     </motion.nav>
+    
   </motion.div>
 );
 
