@@ -100,7 +100,7 @@ const Navbar = () => (
     </SignedIn>
     </motion.nav>
     
-  </motion.div>
+  </motion.div> 
 );
 
 export default Navbar;

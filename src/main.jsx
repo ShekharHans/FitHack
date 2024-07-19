@@ -9,12 +9,11 @@ import ExerciseDetail from "./pages/ExerciseDetail.jsx";
 
 import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react'
 
-// Import your publishable key
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key")
 }
+
 
 const clerkPubKey = "pk_test_YmVjb21pbmctc3RpbmtidWctNzkuY2xlcmsuYWNjb3VudHMuZGV2JA";
 

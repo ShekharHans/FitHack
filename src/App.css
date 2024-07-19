@@ -21,6 +21,7 @@ body {
 .left-arrow {
   cursor: pointer;
   background: transparent;
+  /* background: transparent; */
   outline: none;
   border: none;
   display: flex;
