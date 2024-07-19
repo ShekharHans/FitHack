@@ -9,13 +9,14 @@ import ExerciseDetail from "./pages/ExerciseDetail.jsx";
 
 import { ClerkProvider, SignedIn, SignedOut, SignIn, SignUp } from '@clerk/clerk-react'
 
+const clerkPubKey = "pk_test_YmVjb21pbmctc3RpbmtidWctNzkuY2xlcmsuYWNjb3VudHMuZGV2JA";
 
-if (!PUBLISHABLE_KEY) {
+if (!clerkPubKey) {
   throw new Error("Missing Publishable Key")
 }
 
 
-const clerkPubKey = "pk_test_YmVjb21pbmctc3RpbmtidWctNzkuY2xlcmsuYWNjb3VudHMuZGV2JA";
+
 
 const ClerkWithRoutes = () => {
   const navigate = useNavigate()
